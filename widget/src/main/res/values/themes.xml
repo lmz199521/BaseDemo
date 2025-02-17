@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="CustomDialog" parent="Theme.AppCompat.Dialog" />
+</resources>

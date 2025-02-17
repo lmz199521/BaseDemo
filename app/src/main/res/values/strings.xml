@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="title_msg">我是一个大标题</string>
+    <string name="subtitle_msg">我是一个小标题</string>
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="msg"
+            type="String" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="dialog"
+            type="com.lmz.widght.dialog.CustomDialog" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/circle_dialog_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="我是标题"
+                android:textColor="#000"
+                android:textFontWeight="700"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:padding="10dp"
+                android:text="我是内容非常多的内容撒的就弄卡视角和浓度还不能关闭哦撒旦你发维斯佛教农家尿撒你佛得角哪所防护局" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="#f00"
+                    android:onClick="@{()-> dialog.onClick(`cancel`)}"
+                    android:textFontWeight="700"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#00666666" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="#f00"
+                    android:onClick="@{()->dialog.onClick(`ok`)}"
+                    android:textFontWeight="700"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </FrameLayout>
+</layout>

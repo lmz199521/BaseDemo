@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <!--        type =1 为圆形，  type=2 为圆角-->
+        <attr name="type" format="integer" />
+        <attr name="left_top_radio" format="dimension" />
+        <attr name="left_bottom_radio" format="dimension" />
+        <attr name="right_top_radio" format="dimension" />
+        <attr name="right_bottom_radio" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="AmountTextView">
+        <!--金额-->
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:textStyle" />
+
+        <!--是否启用千分符-->
+        <attr name="groupingUsed" format="boolean" />
+        <!--四舍五入计算模式-->
+        <attr name="roundingMode" format="enum">
+            <enum name="UP" value="1" />
+            <enum name="DOWN" value="2" />
+            <enum name="CEILING" value="3" />
+            <enum name="FLOOR" value="4" />
+            <enum name="HALF_UP" value="5" />
+            <enum name="HALF_DOWN" value="6" />
+            <enum name="HALF_EVEN" value="7" />
+            <enum name="UNNECESSARY" value="8" />
+        </attr>
+
+        <!--是否显示正负号-->
+        <attr name="positiveNegative" format="boolean" />
+        <attr name="positiveNegativeColor" format="color" />
+        <attr name="positiveNegativeTextSize" format="dimension" />
+        <attr name="positiveNegativePadding" format="dimension" />
+
+        <!--货币符号-->
+        <attr name="symbol" format="string" />
+        <!--货币和符号之间的距离-->
+        <attr name="symbolPadding" format="dimension" />
+        <!--货币符号的位置-->
+        <attr name="symbolGravity" format="enum">
+            <enum name="start" value="0x00800003" />
+            <enum name="end" value="0x00800005" />
+            <enum name="top" value="0x30" />
+            <enum name="bottom" value="0x50" />
+        </attr>
+        <!--货币符号大小-->
+        <attr name="symbolSize" format="dimension" />
+        <!--货币符合颜色-->
+        <attr name="symbolColor" format="color" />
+        <!--保留小数位数-->
+        <attr name="decimalDigits" format="integer" />
+        <!--小数与整数位的间距-->、
+        <attr name="decimalPadding" format="dimension" />
+        <!--小数位字体大小-->
+        <attr name="decimalTextSize" format="dimension" />
+        <!--小数位字体颜色-->
+        <attr name="decimalTextColor" format="color" />
+        <!--小数位的位置-->
+        <attr name="decimalGravity" format="enum">
+            <enum name="top" value="0x30" />
+            <enum name="bottom" value="0x50" />
+        </attr>
+
+        <!--删除线-->
+        <attr name="strikeThroughLine" format="boolean" />
+        <attr name="strikeThroughLineColor" format="color" />
+        <attr name="strikeThroughLineSize" format="dimension" />
+        <!--下划线-->
+        <attr name="underLine" format="boolean" />
+        <attr name="underLineColor" format="color" />
+        <attr name="underLineSize" format="dimension" />
+
+
+    </declare-styleable>
+</resources>
