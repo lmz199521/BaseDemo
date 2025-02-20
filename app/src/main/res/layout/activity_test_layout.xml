@@ -21,9 +21,11 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/scroll_root"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -53,9 +55,11 @@
                     android:orientation="horizontal">
 
                     <com.lmz.widght.CircleImageView
+                        android:id="@+id/icon_1"
                         android:layout_width="@dimen/dp_100"
                         android:layout_height="@dimen/dp_100"
                         android:layout_margin="@dimen/dp_10"
+                        android:onClick="reddot"
                         android:scaleType="center"
                         app:defaultRes="@{defaultRes}"
                         app:imageUrl="@{imageUrl}" />
@@ -66,6 +70,7 @@
                         android:layout_margin="@dimen/dp_10"
                         android:scaleType="center"
                         app:defaultRes="@{defaultRes}"
+                        android:onClick="clear"
                         app:imageUrl="@{imageUrl}"
                         app:left_bottom_radio="@dimen/dp_10"
                         app:right_bottom_radio="@dimen/dp_10"
@@ -84,33 +89,121 @@
                         app:right_top_radio="@dimen/dp_10"
                         app:type="2" />
 
-
                 </LinearLayout>
-                    <com.lmz.widght.AmountTextView
-                        android:id="@+id/amountTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1234.56"
-                        android:textColor="#FF0000"
-                        android:textSize="16sp"
-                        app:positiveNegative="true"
-                        app:positiveNegativeTextSize="14sp"
-                        app:symbol="¥"
-                        app:symbolColor="#00FF00"
-                        app:symbolSize="16sp"
-                        app:decimalDigits="2"
-                        app:decimalTextColor="#0000FF"
-                        app:decimalTextSize="14sp"
-                        app:strikeThroughLine="true"
-                        app:strikeThroughLineColor="#FF0000"
-                        app:strikeThroughLineSize="2dp"
-                        app:underLine="true"
-                        app:underLineColor="#0000FF"
-                        app:underLineSize="2dp" />
+                <com.lmz.widght.AmountTextView
+                    android:id="@+id/amountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1234.56"
+                    android:textColor="#FF0000"
+                    android:textSize="16sp"
+                    app:positiveNegative="true"
+                    app:positiveNegativeTextSize="14sp"
+                    app:symbol="¥"
+                    app:symbolColor="#00FF00"
+                    app:symbolSize="16sp"
+                    app:decimalDigits="2"
+                    app:decimalTextColor="#0000FF"
+                    app:decimalTextSize="14sp"
+                    app:strikeThroughLine="true"
+                    app:strikeThroughLineColor="#FF0000"
+                    app:strikeThroughLineSize="2dp"
+                    app:underLine="true"
+                    app:underLineColor="#0000FF"
+                    app:underLineSize="2dp" />
 
-
+                <com.lmz.widght.CustomRedDot
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="24dp"
+                    android:layout_marginStart="30dp"
+                    android:text="99+"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp" />
             </LinearLayout>
         </ScrollView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/icon_img"
+                    android:backgroundTint="#f00"
+                    android:src="@drawable/icon_ava"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首页"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/icon2"
+                    android:backgroundTint="#f00"
+                    android:src="@drawable/icon_ava"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="视频"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/icon3"
+                    android:backgroundTint="#f00"
+                    android:src="@drawable/icon_ava"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <!--        <com.lmz.widght.CustomNavigationView
+                    android:id="@+id/navigation_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"/>-->
     </LinearLayout>
 </layout>
